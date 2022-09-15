@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS | Calculadora de Empréstimo</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+
+<body>
+    <header>
+        <h1 class="header__titulo">Calculadora de Empréstimo</h1>
+    </header>
+    <main>
+        <table class="tabela">
+            <tr class="tabela__linha">
+                <th class="linha__titulo">Insira os dados do empréstimo:</th>
+                <td></td>
+                <th class="linha__titulo">Saldo do empréstimo, patrimônio líquido acumulado e pagamentos de juros</th>
+            </tr>
+            <tr class="tabela__linha">
+                <td>Valor do empréstimo ($):</td>
+                <td><input id="amount" onchange="calculate();"></td>
+                <td rowspan="8" id="linha__canvas">
+                    <canvas id="graph" width="400" height="250"></canvas>
+                </td>
+            </tr>
+            <tr class="tabela__linha">
+                <td class="linha">Juros anuais (%):</td>
+                <td class="linha"><input id="apr" onchange="calculate();"></td>
+            </tr>
+            <tr class="tabela__linha">
+                <td class="linha">Período de reembolso (anos):</td>
+                <td class="linha"><input id="years" onchange="calculate();"></td>
+            </tr>
+            <tr class="tabela__linha">
+                <td class="linha">Zipcode (para encontrar credores)</td>
+                <td class="linha"><input id="zipcode" onchange="calculate();"></td>
+            </tr>
+            <tr class="tabela__linha">
+                <th class="linha__titulo linha">Pagamentos Aproximados:</th>
+                <td class="linha"><button onclick="calculate();">Calcular</button></td>
+            </tr>
+            <tr class="tabela__linha">
+                <td class="linha">Pagamento mensal:</td>
+                <td class="linha">R$<span class="output" id="payment"></span></td>
+            </tr>
+            <tr class="tabela__linha">
+                <td class="linha">Pagamento total</td>
+                <td class="linha">R$<span class="output" id="total"></span></td>
+            </tr>
+            <tr class="tabela__linha">
+                <td class="linha">Juros totais:</td>
+                <td class="linha">R$<span class="output" id="totalinterest"></span></td>
+            </tr>
+            <tr class="tabela__linha">
+                <th class="linha__patrocinadores linha__titulo">Patrocinadores:</th>
+                <td colspan="2" class="linha__patrocinadores">
+                    Solicite seu empréstimo com um desses credores finos:
+                    <div id="lenders"></div>
+                </td>
+            </tr>
+        </table>
+    </main>
+    <footer>
+        <h1 class="footer__copy">©Felipe Lima</h1>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
