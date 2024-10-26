@@ -16,9 +16,9 @@ EN-US: The project is not responsive, so it may not display well on devices with
 
   ![Licensa MIT](https://img.shields.io/github/license/LipePLima/AluraGeek?style=for-the-badge)
 
-  PT-BR:Todos os direitos reservados a ©Felipe Lima - 2022
+  PT-BR: Todos os direitos reservados a ©Felipe Lima - 2022
   
-  EN-US:All rights reserved ©Felipe Lima - 2021
+  EN-US: All rights reserved ©Felipe Lima - 2021
   
 ## Depoimento | Testimonial
 
